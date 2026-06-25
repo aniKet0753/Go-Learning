@@ -21,5 +21,7 @@ var city  string
 	default:
 		fmt.Print("this is default print")
 	}
+	fmt.Println("this is from main funciton")
+	halper()
 }
 
