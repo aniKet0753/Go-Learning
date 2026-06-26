@@ -1,6 +1,7 @@
 package main
 
 import (
+	"Go-Learning/externalHalper"
 	"fmt"
 )
 func main(){
@@ -21,7 +22,23 @@ var city  string
 	default:
 		fmt.Print("this is default print")
 	}
-	fmt.Println("this is from main funciton")
-	halper()
+	
+
+var firstname string
+var lastname string 
+var email string
+
+
+	fmt.Println("inter your first name ")
+	fmt.Scan(&firstname)
+	fmt.Println("inter your first name ")
+	fmt.Scan(&lastname)
+	fmt.Println("inter your email ")
+	fmt.Scan(&email)
+	isvalidemail , isvalidname := helper.Helperfunction(firstname,lastname,email) 
+	if isvalidemail && isvalidname {
+		fmt.Printf("this input is valid from switch package %v %v\n",isvalidemail,isvalidname)
+	}
+
 }
 
